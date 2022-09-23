@@ -1,0 +1,30 @@
+{
+    "startup_app": {
+        "name": "OpenfinPOC",
+        "url": "http://localhost:5555/index.html",
+        "uuid": "OpenfinPOC",
+        "applicationIcon": "http://localhost:5555/favicon.ico",
+        "autoShow": true,
+        "saveWindowState": true,
+        "permissions": {
+            "System": {
+                "downloadAsset": true,
+                "openUrlWithBrowser": {
+                    "enabled": true,
+                    "protocols": ["slack", "msteams"]
+                },
+				"launchExternalProcess": true
+			}
+        }
+    },
+    "runtime": {
+        "arguments": "--v=1 --inspect=9222",
+        "version": "canary"
+    },
+    "shortcut": {
+        "company": "OpenFin",
+        "description": "Openfin POC",
+        "icon": "http://localhost:5555/favicon.ico",
+        "name": "Openfin POC"
+    }
+}

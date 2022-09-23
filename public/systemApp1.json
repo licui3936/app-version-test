@@ -1,0 +1,30 @@
+{
+    "startup_app": {
+        "name": "OpenfinTest",
+        "url": "http://google.com",
+        "uuid": "OpenfinTest",
+        "autoShow": true,
+        "saveWindowState": true,
+		"applicationIcon": "http://localhost:5555/favicon.ico",
+		"permissions": {
+            "System": {
+                "launchExternalProcess": true,
+                "openUrlWithBrowser": {
+                    "enabled": true,
+                    "protocols": ["slack", "msteams"]
+                },
+                "terminateExternalProcess": true
+            },
+            "webAPIs": ["notifications", "audio", "video"]
+        }
+    },
+    "runtime": {
+        "arguments": "--inspect=9222 --v=1 --security-realm=test2",
+        "version": "stable-test1"
+    },
+    "shortcut": {
+        "company": "OpenFin",
+        "description": "Openfin POC",
+        "name": "Openfin POC"
+    }
+}
