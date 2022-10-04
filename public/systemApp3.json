@@ -20,7 +20,7 @@
     },
     "runtime": {
         "arguments": "--inspect=9222 --v=1 --security-realm=test2",
-        "version": "stable"
+        "version": "canary"
     },
     "shortcut": {
         "company": "OpenFin",

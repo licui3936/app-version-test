@@ -43,3 +43,7 @@ async function init() {
         console.log(evt);
     });
 }
+
+function launchApp(){
+	fin.System.launchManifest('http://localhost:5555/app2.json');
+}
