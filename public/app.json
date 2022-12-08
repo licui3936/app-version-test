@@ -19,7 +19,7 @@
     },
     "runtime": {
         "arguments": "--v=1 --inspect=9222",
-        "version": "29.105.71.32"
+        "version": "beta"
     },
     "shortcut": {
         "company": "OpenFin",

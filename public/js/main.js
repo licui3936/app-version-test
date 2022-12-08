@@ -44,6 +44,29 @@ async function init() {
     });
 }
 
+const result = document.getElementById('result');
 function launchApp(){
-	fin.System.launchManifest('http://localhost:5555/app2.json');
+    result.value = '';
+	fin.System.launchManifest('http://localhost:5555/app2.json',
+    {
+        subscribe: (launch) => {
+            launch.on('app-version-progress', (progress) => {
+                result.value += 'app-version-progress: \n';
+                result.value += JSON.stringify(progress, null, 2) + '\n\n';
+            });
+            launch.on('runtime-status', (status) => {
+                result.value += 'runtime-status: \n';
+                result.value += JSON.stringify(status, null, 2) + '\n\n';
+            });
+            launch.on('app-version-complete', (complete) => {
+                result.value += 'app-version-complete: \n';
+                result.value += JSON.stringify(complete, null, 2);
+            });
+            launch.on('app-version-error', (error) => {
+                result.value += 'app-version-error: \n';
+                result.value += JSON.stringify(error, null, 2);
+            })
+    
+        }
+    });
 }
