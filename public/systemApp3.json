@@ -20,7 +20,7 @@
     },
     "runtime": {
         "arguments": "--inspect=9222 --v=1",
-        "version": "canary"
+        "version": "30.107.73.4"
     },
     "shortcut": {
         "company": "OpenFin",
